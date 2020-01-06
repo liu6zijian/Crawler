@@ -12,6 +12,7 @@ headers = {
                  '(KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
 }
 
+# when the requests.text is empty, please add the argument headers
 def getURLInfo(url):
     res = requests.get(url, headers = headers)
     res.encoding = 'utf-8' # 转码修改，防止中文乱码
