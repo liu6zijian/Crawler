@@ -23,7 +23,7 @@ def getURLInfo(url):
         score = score.select('span')[1]['title']
         with open('FilmComment.csv', "a+", newline='', encoding='utf-8-sig') as file:
             csv_file = csv.writer(file)
-            datas = [u'%s'%(score), u'%s'%(comment.text)]
+            datas = [u'%s'%(score)+'\t', u'%s'%(comment.text)]
             csv_file.writerow(datas)
         # print(score, comment.text)
     return soup
